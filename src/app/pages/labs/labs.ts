@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, input } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 
 @Component({
   selector: 'app-labs',
@@ -36,5 +36,14 @@ export class Labs {
   keydownHandler(event:  KeyboardEvent){
     const input = event.target as HTMLInputElement;
     console.log(input.value);
+  }
+
+  //Signal manejo de reactividad
+  nombre = signal('Miguel');
+
+  ChangeText(event: Event){
+    const input = event.target as HTMLInputElement; //le el valor
+    const newValue = input.value; //asigna el valor de manera provisional por que no se puede hacer directamente
+    this.nombre.set(newValue); // asigna el valor al signal nombre = signal('Miguel');
   }
 }

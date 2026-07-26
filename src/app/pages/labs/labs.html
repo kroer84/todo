@@ -31,4 +31,10 @@
     <p>(keydown)</p>
     <input type="text" [value]="person.name" (keydown)="keydownHandler($event)">
   </div>
+
+  <div class="container">
+	<h3>Signal</h3>
+	<p>Nombre: {{ nombre()}}</p>
+	<input type="text" name="" id="" [value]="nombre()" (change)="ChangeText($event)">
+  </div>
 </div>
