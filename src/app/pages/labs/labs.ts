@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-labs',
@@ -24,5 +24,17 @@ export class Labs {
     name: 'Miguel',
     age: 42,
     avatar: 'https://w3schools.com/howto/img_avatar.png'
+  }
+  clickHandler(){
+    alert ('Hola mundo !!!')
+  }
+
+  changeHandler(event: Event){
+    console.log(event);
+  }
+
+  keydownHandler(event:  KeyboardEvent){
+    const input = event.target as HTMLInputElement;
+    console.log(input.value);
   }
 }
