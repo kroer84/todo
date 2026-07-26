@@ -18,4 +18,11 @@ export class Labs {
   age = 42;
   disabled =  false;
   img = 'https://w3schools.com/howto/img_avatar.png'
+
+  //manejo de objetos
+  person = {
+    name: 'Miguel',
+    age: 42,
+    avatar: 'https://w3schools.com/howto/img_avatar.png'
+  }
 }
