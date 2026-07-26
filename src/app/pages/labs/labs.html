@@ -21,20 +21,29 @@
 	<input type="number" name="" id="" [value]="person.age" />
 	<button [disabled]="disabled">click me</button>
 	<p>persona: {{ person.name }}</p>
-  <button (click)="clickHandler()">click me</button>
-  <button (dblclick)="clickHandler()">Doble click</button>
-  <div class="contain">
-    <p>(change)</p>
-    <input type="number" [value]="person.age" (change)="changeHandler($event)">
-  </div>
-    <div class="contain">
-    <p>(keydown)</p>
-    <input type="text" [value]="person.name" (keydown)="keydownHandler($event)">
-  </div>
+	<button (click)="clickHandler()">click me</button>
+	<button (dblclick)="clickHandler()">Doble click</button>
+	<div class="container">
+		<p>(change)</p>
+		<input type="number" [value]="person.age" (change)="changeHandler($event)" />
+	</div>
+	<div class="container">
+		<p>(keydown)</p>
+		<input type="text" [value]="person.name" (keydown)="keydownHandler($event)" />
+	</div>
 
-  <div class="container">
-	<h3>Signal</h3>
-	<p>Nombre: {{ nombre()}}</p>
-	<input type="text" name="" id="" [value]="nombre()" (change)="ChangeText($event)">
-  </div>
+	<div class="container">
+		<h3>Signal</h3>
+		<p>Nombre: {{ nombre() }}</p>
+		<input type="text" name="" id="" [value]="nombre()" (change)="ChangeText($event)" />
+	</div>
+
+	<div class="container">
+		<ul type="none">
+			<p>Numero total de Elementos de la lista : {{ tareas().length}}</p>
+			<li *ngFor="let tarea of tareas(); index as i">
+				{{i + 1 }}. - {{ tarea }}
+			</li>
+		</ul>
+	</div>
 </div>

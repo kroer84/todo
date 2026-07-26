@@ -46,4 +46,12 @@ export class Labs {
     const newValue = input.value; //asigna el valor de manera provisional por que no se puede hacer directamente
     this.nombre.set(newValue); // asigna el valor al signal nombre = signal('Miguel');
   }
+
+  tareas = signal([
+    'tarea1',
+    'tarea2',
+    'tares3',
+    'tares4'
+  ]);
+
 }
