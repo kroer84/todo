@@ -13,5 +13,9 @@ export class Labs {
     'Instalar Angular CLI',
     'Crear proyecto',
     'Crear componente'
-  ]
+  ];
+  name = "Miguel";
+  age = 42;
+  disabled =  false;
+  img = 'https://w3schools.com/howto/img_avatar.png'
 }
